@@ -4,6 +4,7 @@ pipeline {
     }
     options{   //TIMEOUT COUNTER STARTS BEFORE AGENT IS ALLOCATED
         timeout(time: 30, unit: 'SECONDS')
+        disableConcurrentBuilds()
     }
     stages {
         stage('Build') {
