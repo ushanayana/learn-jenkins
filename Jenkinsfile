@@ -2,6 +2,9 @@ pipeline {
     agent {
         label 'AGENT-1'
     }
+    options{   //TIMEOUT COUNTER STARTS BEFORE AGENT IS ALLOCATED
+        timeout(time: 1, unit: 'SECONDS')
+    }
     stages {
         stage('Build') {
             steps {
